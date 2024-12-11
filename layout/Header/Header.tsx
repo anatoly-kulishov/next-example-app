@@ -5,7 +5,7 @@ import cn from 'classnames';
 import { ButtonIcon } from '../../components/ButtonIcon/ButtonIcon';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Sidebar } from '../Sidebar/Sidebar';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
