@@ -34,13 +34,15 @@ export const Menu = (): JSX.Element => {
     };
 
     const openSecondLevel = (secondCategory: string) => {
-        setMenu && setMenu(menu.map(m => {
-            if (m._id.secondCategory == secondCategory) {
-                setAnnounce(m.isOpened ? 'closed' : 'opened');
-                m.isOpened = !m.isOpened;
-            }
-            return m;
-        }));
+        if (setMenu) {
+            setMenu(menu.map(m => {
+                if (m._id.secondCategory == secondCategory) {
+                    setAnnounce(m.isOpened ? 'closed' : 'opened');
+                    m.isOpened = !m.isOpened;
+                }
+                return m;
+            }));
+        }
     };
 
     const openSecondLevelKey = (key: KeyboardEvent, secondCategory: string) => {
